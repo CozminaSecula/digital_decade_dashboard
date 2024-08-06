@@ -19,17 +19,17 @@ $font-size-root: 0.9rem;
 
 // colors
 
-$navbar-bg: #7B7B7B;
+$navbar-bg: #414040;
 $navbar-fg: #FCFCFC;
 
 $link-color: #414040;
-$hover-color: lighten($link-color, 40%);
+$hover-color: lighten($link-color, 50%);
 
 $body-bg: #FCFCFC;
 $body-color: #414040;
 
 $sidebar-fg: #414040;
-$sidebar-bg: #f4f4f4;
+$sidebar-bg: #7D3C98;
 
 /*-- scss:rules --*/
 .card-header {
@@ -42,6 +42,7 @@ $sidebar-bg: #f4f4f4;
 
 .nav-link{
   color: #414040;
+  font-size: 1rem;
 }
 
 
@@ -50,7 +51,7 @@ div.callout.callout {
 }
 
 div.callout.callout-style-default>.callout-header {
-  background-color: #FCFCFC;
+  background-color: #F0F0F0;
 }
 
 .navbar-container {
@@ -58,32 +59,107 @@ div.callout.callout-style-default>.callout-header {
 }
 
 
-/* Make all headings and paragraph text white */
-h1, h2, h3, h4, h5, h6, p {
-  color: $theme-darkest-gray;
-}
 
-/* Make the text in the sidebar (of the Quarto website, not the dashboard), dark gray */
-.sidebar-title {
-  color: $theme-darkest-gray;
-}
+ /* Sidebar */
+  .bslib-grid > .bslib-sidebar-layout {
+    border: none;
+    gap: var(--bslib-spacer, 1rem);
+    > .main {
+      padding: 0;
+    }
+    > .sidebar {
+      border-radius: $card-border-radius;
+      border: $card-border-width solid $card-border-color;
+    }
+    > .collapse-toggle {
+      display: none;
+    }
 
-/* Text colour of currently selected page in sidebar */
-div.sidebar-item-container .active {
-  color: $theme-dark-purple;
-}
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content 1fr;
+      > .main {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .sidebar {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+  }
 
-/* Text colour of noncurrently selected sidebar list items */
-div.sidebar-item-container {
-  color: $theme-darkest-gray;
-}
+  .sidebar-right {
+    .sidebar {
+      padding-left: 2.5em;
+    }
 
-/* Text colour of currently hovered on sidebar list item */
-div.sidebar-item-container:hover {
-  color: $theme-dark-purple;
-}
+    .collapse-toggle {
+      left: 2px;
+    }
+  }
 
-/* Colour of "Next page" text in bottom right of each Quarto HTML webpage */
-.nav-page a {
-  color: $link-color;
-}
+  .quarto-dashboard .sidebar-right button.collapse-toggle:not(.transitioning) {
+    left: unset;
+  }
+
+  aside.sidebar {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: $card-cap-bg;
+    color: $card-cap-color or $body-color;
+  }
+
+  .bslib-sidebar-layout {
+    > div.main {
+      padding: 0.7em;
+    }
+
+    button.collapse-toggle {
+      margin-top: 0.3em;
+    }
+  }
+
+  .bslib-sidebar-layout .collapse-toggle {
+    top: 0;
+  }
+
+  .bslib-sidebar-layout.sidebar-collapsed:not(.transitioning):not(
+      .sidebar-right
+    )
+    .collapse-toggle {
+    left: 2px;
+  }
+
+  .sidebar > section > .h3:first-of-type {
+    margin-top: 0em;
+  }
+
+  .sidebar .h3,
+  .sidebar .h4,
+  .sidebar .h5,
+  .sidebar .h6 {
+    margin-top: 0.5em;
+  }
+
+  .sidebar {
+    @include observable-sidebar-inputs();
+
+    .card-body {
+      margin-bottom: 2em;
+    }
+
+    .shiny-input-container {
+      margin-bottom: 1em;
+    }
+
+    .shiny-options-group {
+      margin-top: 0;
+    }
+    .control-label {
+      margin-bottom: 0.3em;
+    }
+  }
+  .card .card-body .quarto-layout-row {
+    align-items: stretch;
+  }
