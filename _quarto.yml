@@ -12,7 +12,7 @@ website:
       - href: dashboard.qmd
         text: Dashboard
 
-
+    background: light
 format:
   html:
     theme: [cosmo, custom.scss]

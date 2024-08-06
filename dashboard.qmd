@@ -33,8 +33,6 @@ library(geofacet)
 ```{r}
 #| label: load-data
 
-
-#./hc_bt_ps_selected_kpi/wip/dd_eight_indicators.csv
 df_dd <- read_csv("data/dd_eight_indicators.csv")
 
 ```
@@ -118,23 +116,23 @@ theme(
   legend.title = element_blank(),
   legend.position = "top",
   legend.justification = 0,
-  legend.text = element_text(size = 14,
+  legend.text = element_text(size = 16,
                              family = "Georgia",
                              color = "#828282"),
-  axis.text = element_text(size = 14,
+  axis.text = element_text(size = 16,
                           family = "Georgia",
                           color = "#929497"),
-  plot.title = element_textbox_simple(size = 18,
+  plot.title = element_textbox_simple(size = 22,
                               color = "#414040",
                               face = "bold", 
                               family = "Georgia",
                               margin = margin(12, 0, 12, 0)),
-  plot.subtitle = ggtext::element_textbox_simple(size = 16,
+  plot.subtitle = ggtext::element_textbox_simple(size = 19,
                                                    vjust = 1,
                                                    margin = margin(0, 0, 12, 0),
                                                    color = "#646369",
                                                    family = "Georgia"),
-  plot.caption = element_markdown(color = "#828282" , size = 9.5, hjust = 0,
+  plot.caption = element_markdown(color = "#828282" , size = 12, hjust = 0,
                                   family = 'Georgia'),
   plot.title.position = "plot",
   plot.caption.position = "plot",
@@ -237,23 +235,23 @@ theme(
   legend.title = element_blank(),
   legend.position = "top",
   legend.justification = 0,
-  legend.text = element_text(size = 14,
+  legend.text = element_text(size = 16,
                              family = "Georgia",
                              color = "#828282"),
-  axis.text = element_text(size = 14,
+  axis.text = element_text(size = 16,
                           family = "Georgia",
                           color = "#929497"),
-  plot.title = element_textbox_simple(size = 18,
+  plot.title = element_textbox_simple(size = 22,
                               color = "#414040",
                               face = "bold", 
                               family = "Georgia",
                               margin = margin(12, 0, 12, 0)),
-  plot.subtitle = ggtext::element_textbox_simple(size = 16,
+  plot.subtitle = ggtext::element_textbox_simple(size = 19,
                                                    vjust = 1,
                                                    margin = margin(0, 0, 12, 0),
                                                    color = "#646369",
                                                    family = "Georgia"),
-  plot.caption = element_markdown(color = "#828282" , size = 9.5, hjust = 0,
+  plot.caption = element_markdown(color = "#828282" , size = 12, hjust = 0,
                                   family = 'Georgia'),
   plot.title.position = "plot",
   plot.caption.position = "plot",
@@ -374,20 +372,20 @@ theme(
   axis.ticks.x = element_line(linewidth = 0.5, color = "#BFBEBE"),
   axis.ticks.y = element_line(linewidth = 0.5, color = "#BFBEBE"),
   panel.grid = element_blank(),
-  axis.text = element_text(size = 14,
+  axis.text = element_text(size = 16,
                           family = "Georgia",
                           color = "#929497" ),
-  plot.title = element_textbox_simple(size = 18,
+  plot.title = element_textbox_simple(size = 22,
                               color = "#414040",
                               face = "bold", 
                               family = "Georgia",
                               margin = margin(12, 0, 12, 0)),
-  plot.subtitle = ggtext::element_textbox_simple(size = 16,
+  plot.subtitle = ggtext::element_textbox_simple(size = 19,
                                                    vjust = 1,
                                                    margin = margin(0, 0, 12, 0),
                                                    color = "#646369",
                                                    family = "Georgia"),
-  plot.caption = element_markdown(color = "#828282" , size = 9.5, hjust = 0,
+  plot.caption = element_markdown(color = "#828282" , size = 12, hjust = 0,
                                   family = 'Georgia'),
   plot.title.position = "plot",
   plot.caption.position = "plot",
@@ -477,17 +475,17 @@ plot_ai_cc_da <- ggplot(data = ai_cc_da ) +
           strip.background = element_blank(),
           strip.text.x = element_blank(), 
           line = element_blank(),
-          plot.title = element_textbox_simple(size = 18,
+          plot.title = element_textbox_simple(size = 20,
                               color = "#414040",
                               face = "bold", 
                               family = "Georgia",
                               margin = margin(12, 0, 12, 0)),
-         plot.subtitle = ggtext::element_textbox_simple(size = 16,
+         plot.subtitle = ggtext::element_textbox_simple(size = 18,
                                                    vjust = 1,
                                                    margin = margin(0, 0, 12, 0),
                                                    color = "#646369",
                                                    family = "Georgia"),
-         plot.caption = element_markdown(color = "#828282" , size = 9.5, hjust = 0,
+         plot.caption = element_markdown(color = "#828282" , size = 12, hjust = 0,
                                   family = 'Georgia'),
          plot.title.position = "plot",
          plot.caption.position = "plot",
@@ -564,23 +562,23 @@ theme(
   legend.title = element_blank(),
   legend.position = "top",
   legend.justification = 0,
-  legend.text = element_text(size = 14,
+  legend.text = element_text(size = 16,
                              family = "Georgia",
                              color = "#828282"),
-  axis.text = element_text(size = 14,
+  axis.text = element_text(size = 16,
                           family = "Georgia",
                           color = "#929497"),
-  plot.title = element_textbox_simple(size = 18,
+  plot.title = element_textbox_simple(size = 22,
                               color = "#414040",
                               face = "bold", 
                               family = "Georgia",
                               margin = margin(12, 0, 12, 0)),
-  plot.subtitle = ggtext::element_textbox_simple(size = 16,
+  plot.subtitle = ggtext::element_textbox_simple(size = 19,
                                                    vjust = 1,
                                                    margin = margin(0, 0, 12, 0),
                                                    color = "#646369",
                                                    family = "Georgia"),
-  plot.caption = element_markdown(color = "#828282" , size = 9.5, hjust = 0,
+  plot.caption = element_markdown(color = "#828282" , size = 12, hjust = 0,
                                   family = 'Georgia'),
   plot.title.position = "plot",
   plot.caption.position = "plot",
@@ -825,6 +823,37 @@ plot_sme
 
 ## Column {width="33%"}
 
+### Row {height="50%"}
+```{r}
+#| title: AI
+#| fig-width: 14
+#| fig-asp: 0.75
+#| padding: 5px
+#| width: 90%
+
+plot_ai
+
+```
+
+
+### Row {height="50%"}
+
+```{r}
+#| title: Cloud Computing
+#| fig-width: 14
+#| fig-asp: 0.75
+#| padding: 5px
+#| width: 90%
+
+
+plot_cc
+
+
+```
+
+
+## Column {width="33%"}
+
 ### Row {height="35%" .tabset}
 
 ```{r}
@@ -866,35 +895,4 @@ plot_da
   
 ```
 
-
-
-## Column {width="33%"}
-
-### Row {height="50%"}
-```{r}
-#| title: AI
-#| fig-width: 14
-#| fig-asp: 0.75
-#| padding: 5px
-#| width: 90%
-
-plot_ai
-
-```
-
-
-### Row {height="50%"}
-
-```{r}
-#| title: Cloud Computing
-#| fig-width: 14
-#| fig-asp: 0.75
-#| padding: 5px
-#| width: 90%
-
-
-plot_cc
-
-
-```
 

@@ -19,17 +19,17 @@ $font-size-root: 0.9rem;
 
 // colors
 
-$navbar-bg: #414040;
+$navbar-bg: #252525;
 $navbar-fg: #FCFCFC;
 
-$link-color: #414040;
+$link-color: #969696;
 $hover-color: lighten($link-color, 50%);
 
 $body-bg: #FCFCFC;
-$body-color: #414040;
+$body-color: #252525;
 
-$sidebar-fg: #414040;
-$sidebar-bg: #7D3C98;
+$sidebar-fg: #FCFCFC;
+
 
 /*-- scss:rules --*/
 .card-header {
@@ -37,7 +37,7 @@ $sidebar-bg: #7D3C98;
 }
 
 .nav-item > a:hover {
-  color: #F0F0F0;
+  color: #737373;
 }
 
 .nav-link{
@@ -47,119 +47,14 @@ $sidebar-bg: #7D3C98;
 
 
 div.callout.callout {
-  border-left-color: #BFBEBE;
+  border-left-color: #737373;
 }
 
 div.callout.callout-style-default>.callout-header {
-  background-color: #F0F0F0;
+  background-color: #737373;;
 }
 
 .navbar-container {
     height: 75px
 }
 
-
-
- /* Sidebar */
-  .bslib-grid > .bslib-sidebar-layout {
-    border: none;
-    gap: var(--bslib-spacer, 1rem);
-    > .main {
-      padding: 0;
-    }
-    > .sidebar {
-      border-radius: $card-border-radius;
-      border: $card-border-width solid $card-border-color;
-    }
-    > .collapse-toggle {
-      display: none;
-    }
-
-    @include media-breakpoint-down(md) {
-      grid-template-columns: 1fr;
-      grid-template-rows: max-content 1fr;
-      > .main {
-        grid-column: 1;
-        grid-row: 2;
-      }
-      .sidebar {
-        grid-column: 1;
-        grid-row: 1;
-      }
-    }
-  }
-
-  .sidebar-right {
-    .sidebar {
-      padding-left: 2.5em;
-    }
-
-    .collapse-toggle {
-      left: 2px;
-    }
-  }
-
-  .quarto-dashboard .sidebar-right button.collapse-toggle:not(.transitioning) {
-    left: unset;
-  }
-
-  aside.sidebar {
-    padding-left: 1em;
-    padding-right: 1em;
-    background-color: $card-cap-bg;
-    color: $card-cap-color or $body-color;
-  }
-
-  .bslib-sidebar-layout {
-    > div.main {
-      padding: 0.7em;
-    }
-
-    button.collapse-toggle {
-      margin-top: 0.3em;
-    }
-  }
-
-  .bslib-sidebar-layout .collapse-toggle {
-    top: 0;
-  }
-
-  .bslib-sidebar-layout.sidebar-collapsed:not(.transitioning):not(
-      .sidebar-right
-    )
-    .collapse-toggle {
-    left: 2px;
-  }
-
-  .sidebar > section > .h3:first-of-type {
-    margin-top: 0em;
-  }
-
-  .sidebar .h3,
-  .sidebar .h4,
-  .sidebar .h5,
-  .sidebar .h6 {
-    margin-top: 0.5em;
-  }
-
-  .sidebar {
-    @include observable-sidebar-inputs();
-
-    .card-body {
-      margin-bottom: 2em;
-    }
-
-    .shiny-input-container {
-      margin-bottom: 1em;
-    }
-
-    .shiny-options-group {
-      margin-top: 0;
-    }
-    .control-label {
-      margin-bottom: 0.3em;
-    }
-  }
-  .card .card-body .quarto-layout-row {
-    align-items: stretch;
-  }
