@@ -1,5 +1,13 @@
 /*-- scss:defaults --*/
 
+$theme-dark-purple: #7D3C98;
+$theme-darkest-gray: #191414;
+$theme-medium-gray: #282828;
+$theme-light-gray: #f4f4f4;
+$theme-text-color: white;
+
+
+
 // fonts
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
@@ -21,6 +29,7 @@ $body-bg: #FCFCFC;
 $body-color: #414040;
 
 $sidebar-fg: #414040;
+$sidebar-bg: #f4f4f4;
 
 /*-- scss:rules --*/
 .card-header {
@@ -48,3 +57,33 @@ div.callout.callout-style-default>.callout-header {
     height: 75px
 }
 
+
+/* Make all headings and paragraph text white */
+h1, h2, h3, h4, h5, h6, p {
+  color: $theme-darkest-gray;
+}
+
+/* Make the text in the sidebar (of the Quarto website, not the dashboard), dark gray */
+.sidebar-title {
+  color: $theme-darkest-gray;
+}
+
+/* Text colour of currently selected page in sidebar */
+div.sidebar-item-container .active {
+  color: $theme-dark-purple;
+}
+
+/* Text colour of noncurrently selected sidebar list items */
+div.sidebar-item-container {
+  color: $theme-darkest-gray;
+}
+
+/* Text colour of currently hovered on sidebar list item */
+div.sidebar-item-container:hover {
+  color: $theme-dark-purple;
+}
+
+/* Colour of "Next page" text in bottom right of each Quarto HTML webpage */
+.nav-page a {
+  color: $link-color;
+}

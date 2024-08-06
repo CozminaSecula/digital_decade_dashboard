@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "digital_decade_dashboard"
+  title: "Digital Decade Dashboard"
   sidebar:
     contents:
       - href: index.qmd
