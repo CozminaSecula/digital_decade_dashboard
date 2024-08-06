@@ -25,7 +25,11 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libudunits2-dev
+          sudo apt-get install -y \
+            libudunits2-dev \
+            libproj-dev \
+            gdal-bin \
+            libgdal-dev
 
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
