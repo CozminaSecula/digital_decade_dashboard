@@ -18,5 +18,8 @@ format:
     theme: [cosmo, custom.scss]
     toc: true
 
+execute:
+  freeze: true
+
 
 
