@@ -22,7 +22,7 @@ $font-size-root: 0.9rem;
 $navbar-bg: #252525;
 $navbar-fg: #FCFCFC;
 
-$link-color: #969696;
+$link-color: #F0F0F0;
 $hover-color: lighten($link-color, 50%);
 
 $body-bg: #FCFCFC;
@@ -31,9 +31,21 @@ $body-color: #252525;
 $sidebar-fg: #FCFCFC;
 
 
+
+/* New Variables */
+$card-border-radius: 8px; /* Adjust as needed / Defines the border-radius for the sidebar elements.*/
+$card-border-width: 1px; /* Adjust as needed / Sets the width of the border for the sidebar elements.*/
+$card-border-color: #cccccc; /* Adjust as needed / Specifies the color of the border for the sidebar elements*/
+$card-cap-bg: #f4f4f4; /* Adjust as needed /Sets the background color for the sidebar */
+$card-cap-color: #252525; /* Adjust as needed /Specifies the text color for the sidebar */
+
+
+
 /*-- scss:rules --*/
 .card-header {
   background-color: #F0F0F0;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .nav-item > a:hover {
@@ -56,5 +68,115 @@ div.callout.callout-style-default>.callout-header {
 
 .navbar-container {
     height: 75px
+}
+
+/* Increase font size for callout title */
+aside.sidebar div.callout .callout-header {
+  font-size: 1rem; /* Adjust this value as needed */
+}
+
+/* Sidebar Customization */
+.bslib-grid > .bslib-sidebar-layout {
+  border: none;
+  gap: var(--bslib-spacer, 1rem);
+  > .main {
+    padding: 0;
+  }
+  > .sidebar {
+    border-radius: $card-border-radius;
+    border: $card-border-width solid $card-border-color;
+  }
+  > .collapse-toggle {
+    display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    > .main {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .sidebar {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+}
+
+.sidebar-right {
+  .sidebar {
+    padding-left: 2.5em;
+  }
+
+  .collapse-toggle {
+    left: 2px;
+  }
+}
+
+.quarto-dashboard .sidebar-right button.collapse-toggle:not(.transitioning) {
+  left: unset;
+}
+
+aside.sidebar {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: $card-cap-bg;
+  color: $card-cap-color or $body-color;
+}
+
+.bslib-sidebar-layout {
+  > div.main {
+    padding: 0.7em;
+  }
+
+  button.collapse-toggle {
+    margin-top: 0.3em;
+  }
+}
+
+.bslib-sidebar-layout .collapse-toggle {
+  top: 0;
+}
+
+.bslib-sidebar-layout.sidebar-collapsed:not(.transitioning):not(
+    .sidebar-right
+  )
+  .collapse-toggle {
+  left: 2px;
+}
+
+.sidebar > section > .h3:first-of-type {
+  margin-top: 0em;
+}
+
+.sidebar .h3,
+.sidebar .h4,
+.sidebar .h5,
+.sidebar .h6 {
+  margin-top: 0.5em;
+}
+
+.sidebar {
+  @include observable-sidebar-inputs();
+
+  .card-body {
+    margin-bottom: 2em;
+  }
+
+  .shiny-input-container {
+    margin-bottom: 1em;
+  }
+
+  .shiny-options-group {
+    margin-top: 0;
+  }
+  .control-label {
+    margin-bottom: 0.3em;
+  }
+}
+
+.card .card-body .quarto-layout-row {
+  align-items: stretch;
 }
 
