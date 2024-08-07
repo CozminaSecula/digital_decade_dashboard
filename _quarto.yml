@@ -4,22 +4,56 @@ project:
 website:
   title: "Digital Decade Dashboard"
   sidebar:
+    collapse-level: 1
     contents:
       - href: index.qmd
-        text: Home
-      - href: about.qmd
         text: About
       - href: dashboard.qmd
         text: Dashboard
+      - section: "Digital transformation of Business"
+        contents:
+          - href: businesses.qmd
+          - text: Project Description
+    background: "#f1de67" # Arylide Yellow
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/CozminaSecula
+        text: "GitHub"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/cozminasecula/
+        text: "Linkedin"
+      - icon: envelope
+        href: mailto:cozmina.secula@gmail.com
+        text: "Email"
 
-    background: light
+
+    style: docked
+    search: true
+
+
+
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)."
+    left: "&copy; 2024 [Cozmina Secula](https://cozminasecula.github.io/blog/)"
+    background: "#f1de67" # Arylide Yellow
+
+
+
+  open-graph: true
+
+
 format:
   html:
-    theme: [cosmo, custom.scss]
+    theme: [simplex, custom.scss]
+    linkcolor: "#866fa3" # Glossy Grape
     toc: true
 
+
 execute:
-  freeze: true
+  freeze: auto
+
+editor: visual
 
 
 

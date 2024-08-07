@@ -1,5 +1,5 @@
 ---
-title: "**Digital Decade Dashboard** <span style='font-size:9pt'><br>Created by Cozmina Secula</span>"
+title: "Digital Decade Dashboard"
 format:
   dashboard:
     nav-buttons: [github]
@@ -853,7 +853,7 @@ plot_cc
 ```
 
 
-## Column {width="33%"}
+## Column {width="34%"}
 
 ### Row {height="35%" .tabset}
 
