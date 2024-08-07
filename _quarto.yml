@@ -10,7 +10,7 @@ website:
         text: About
       - href: dashboard.qmd
         text: Dashboard
-      - section: "Digital transformation of Business"
+      - section: "Digital Business"
         contents:
           - href: businesses.qmd
           - text: Project Description
