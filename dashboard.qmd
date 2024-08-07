@@ -19,7 +19,6 @@ embed-resources: true
 #| label: load-packages
 #| include: false
 
-
 library(tidyverse)
 library(readr)
 library(scales)
@@ -33,6 +32,7 @@ library(geofacet)
 
 ```{r}
 #| label: load-data
+#| include: false
 
 df_dd <- read_csv("data/dd_eight_indicators.csv")
 
@@ -172,10 +172,9 @@ geom_richtext(
 
 ```
 
-
 ```{r}
 #| label: prepare-data_cloud
-#| results: hide
+#| include: false
 
 # Filter data to include only cloud computing indicator
 
@@ -291,10 +290,9 @@ geom_richtext(
 
 ```
 
-
 ```{r}
 #| label: prepare-data_data_analytics
-#| results: hide
+#| include: false
 
 # Filter data to include only data analytics indicator
 
@@ -421,10 +419,8 @@ annotate(
 
 ```{r}
 #| label: prepare-data_ai_cc_da
-#| results: hide
+#| include: false
 
-
-# ./hc_bt_ps_selected_kpi/wip/ai_cc_da.csv
 ai_cc_da <- read_csv("data/ai_cc_da.csv")
 
 ai_cc_da|>
@@ -495,12 +491,9 @@ plot_ai_cc_da <- ggplot(data = ai_cc_da ) +
 
 ```
 
-
-
-
 ```{r}
 #| label: prepare-data_basic_level_of_di
-#| results: hide
+#| include: false
 
 # Filter data to include only basic level of digital intensity indicator (sme)
 
@@ -618,10 +611,9 @@ geom_richtext(
 
 ```
 
-
 ```{r}
 #| label: prepare-data_statistical_population
-#| results: hide
+#| include: false
 
 # Define the format_text function
 format_text <- function(text, color = "#414040", size = 30, bold = FALSE) {
@@ -631,7 +623,7 @@ format_text <- function(text, color = "#414040", size = 30, bold = FALSE) {
   paste0(opening_span, text, closing_span)
 }
 
-# Create a sample data frame similar to df_pop
+# Create a data frame
 df_pop <- data.frame(
   Label = c("Total Enterprises", "Survey Sample Size"),
   Value = c("1.5 million", "161.000")
@@ -682,39 +674,36 @@ theme(
   plot.margin = unit(c(0,0,0,0),"cm"))
 
 
-
-
 ```
 
-
-
-# {.sidebar}
+#  {.sidebar}
 
 <br>
 
 ::: {.callout collapse="true"}
 ## Overview
-Europe aims to empower businesses and people in a human-centered, sustainable, and more prosperous digital future.
-The Digital Decade targets provide a framework to measure progress towards that goal.
 
-4 principal dimensions were defined: 
+How digital is the EU?
 
- - Human Capital 
- - Digital transformation of Business
- - Digital Infrastructure
- - Digitalization of Public Services
- 
+The EU aims to empower businesses and people in a human-centered, sustainable, and more prosperous digital future. The Digital Decade is the framework that guides all actions related to digital. The Digital Decade includes the Digital Decade policy programme, the Digital Decade targets, the objectives, the multi-country projects and the Digital Decade rights & principles.
+
+The focus of this project is the Digital Decade targets, which are the measurable goals for each of the four dimensions: 
+
+- digital skills
+- digital business
+- connectivity
+- digital public services
+
+
 Each dimension has more sub-dimensions. Each sub-dimension has its key performance indicators (KPIs).
 
 The goal for this dashboard is two-fold:
 
-- To visualize how selected KPIs for each dimension performed in 2023 compared with 2021
-- To visualize how EU member states progressed for selected KPIs
+-   To visualize the performance of selected KPIs for each dimension in 2023 compared to 2021.
+-   To visualize the progress of EU member states for selected KPIs.
 
 The visualizations are organized into one page for each dimension.
- 
 :::
-
 
 ## KPIs Definitions
 
@@ -723,15 +712,15 @@ The visualizations are organized into one page for each dimension.
 
 Artificial intelligence, measured as the percentage of enterprises using at least one artificial intelligence technology such as:
 
-- text mining
-- speech recognition
-- natural language generation
-- image recognition and processing
-- machine learning (e.g., deep learning) for data analysis
-- AI based software robotic process automation
-- autonomous robots
-- self-driving vehicles
-- autonomous drones.
+-   text mining
+-   speech recognition
+-   natural language generation
+-   image recognition and processing
+-   machine learning (e.g., deep learning) for data analysis
+-   AI based software robotic process automation
+-   autonomous robots
+-   self-driving vehicles
+-   autonomous drones.
 :::
 
 ::: {.callout collapse="true"}
@@ -739,55 +728,55 @@ Artificial intelligence, measured as the percentage of enterprises using at leas
 
 Cloud computing, measured as the percentage of enterprises using at least one of the following cloud computing services:
 
-- finance or accounting
-- software applications
-- enterprise resource planning (ERP) software applications
-- customer relationship management (CRM) software applications
-- security software applications
-- hosting the enterprise’s database(s)
-- computing platform providing a hosted environment for application development, testing or deployment.
+-   finance or accounting
+-   software applications
+-   enterprise resource planning (ERP) software applications
+-   customer relationship management (CRM) software applications
+-   security software applications
+-   hosting the enterprise’s database(s)
+-   computing platform providing a hosted environment for application development, testing or deployment.
 :::
 
 ::: {.callout collapse="true"}
 ## Data Analytics
-In 2023, Eurostat replaced the Big Data indicator with the Data Analytics one.
-Data analytics refers to the use of technologies, techniques or software tools for analysing data to extract patterns, trends and insights to make conclusions, and predictions and ensure better decision-making with the aim of improving performance (e.g., increase production, reduce costs). Data may be extracted from your own enterprise’ data source or from external sources (e.g., suppliers, customers, government). 
+
+In 2023, Eurostat replaced the Big Data indicator with the Data Analytics one. Data analytics refers to the use of technologies, techniques or software tools for analysing data to extract patterns, trends and insights to make conclusions, and predictions and ensure better decision-making with the aim of improving performance (e.g., increase production, reduce costs). Data may be extracted from your own enterprise’ data source or from external sources (e.g., suppliers, customers, government).
 
 Data Analytics includes a broader set of technologies than the former Big Data.
 :::
 
 ::: {.callout collapse="true"}
 ## AI or Cloud or Data analytics
+
 Artificial Intelligence or Cloud computing services or Data analytics. This indicator is available and calculated for the first time in 2023.
 :::
 
-
 ::: {.callout collapse="true"}
 ## Basic level of digital intensity
+
 SMEs with at least a basic level of digital intensity, measured as the percentage of SMEs using at least 4 of 12 selected digital technologies.
 
 The 2023 survey included the following 12 technologies and/or criteria (source Eurostat):
 
-- Enterprises where more than 50% of the persons employed used computers with access
-to the internet for business purposes;
-- Have ERP software package to share information between different functional areas; - The maximum contracted download speed of the fastest fixed line internet connection is at least 30 Mb/s; 
-- Enterprises where web sales were more than 1% of the total turnover and B2C web sales more than 10% of the web sales; 
-- Data analytics for the enterprise is performed by the enterprise's own employees or by an external provider; 
-- Use any social media;
-- Have customer relationship management (CRM) software; 
-- Buy sophisticated or intermediate cloud computing services; 
-- Use any AI technology; 
-- Buy cloud computing services used over the internet;
-- Used any computer networks for sales (at least 1%);
-- Use two or more social media
+-   Enterprises where more than 50% of the persons employed used computers with access to the internet for business purposes;
+-   Have ERP software package to share information between different functional areas; - The maximum contracted download speed of the fastest fixed line internet connection is at least 30 Mb/s;
+-   Enterprises where web sales were more than 1% of the total turnover and B2C web sales more than 10% of the web sales;
+-   Data analytics for the enterprise is performed by the enterprise's own employees or by an external provider;
+-   Use any social media;
+-   Have customer relationship management (CRM) software;
+-   Buy sophisticated or intermediate cloud computing services;
+-   Use any AI technology;
+-   Buy cloud computing services used over the internet;
+-   Used any computer networks for sales (at least 1%);
+-   Use two or more social media
 
 The Enterprise survey questions used for the definition of the Digital Intensity Index vary every year but in 2023 most of the technologies are the same as those of the 2021survey. The list used by year is provided by Eurostat.
-
 :::
 
-# Businesses Digitalization {orientation="columns"}
+# Digital Business {orientation="columns"}
 
 ## Column {width="33%"}
+
 ### Row {height="35%"}
 
 ```{r}
@@ -797,14 +786,9 @@ The Enterprise survey questions used for the definition of the Digital Intensity
 #| padding: 5px
 #| width: 90%
 
-
-
 plot_total_entpr
 
-
 ```
-
-
 
 ### Row {height="65%"}
 
@@ -815,16 +799,14 @@ plot_total_entpr
 #| padding: 5px
 #| width: 90%
 
-
 plot_sme
 
-
 ```
-
 
 ## Column {width="33%"}
 
 ### Row {height="50%"}
+
 ```{r}
 #| title: AI
 #| fig-width: 14
@@ -836,7 +818,6 @@ plot_ai
 
 ```
 
-
 ### Row {height="50%"}
 
 ```{r}
@@ -846,16 +827,13 @@ plot_ai
 #| padding: 5px
 #| width: 90%
 
-
 plot_cc
-
 
 ```
 
+## Column {width="33%"}
 
-## Column {width="34%"}
-
-### Row {height="35%" .tabset}
+### Row {height="35%"}
 
 ```{r}
 #| title: AI or Cloud or Data Analytics
@@ -864,22 +842,8 @@ plot_cc
 #| padding: 5px
 #| width: 90%
 
-
-
 plot_ai_cc_da
   
-```
-
-```{r}
-#| title: Data
-#| width: 70%
-
-ai_cc_da |>
-select(year, country, entsize, unit, activity, indicator, value) |>
-arrange(desc(value)) |>
-datatable(options = list(pageLength = 5, 
-                         scrollY = TRUE))
-
 ```
 
 ### Row {height="65%"}
@@ -894,5 +858,3 @@ datatable(options = list(pageLength = 5,
 plot_da
   
 ```
-
-
