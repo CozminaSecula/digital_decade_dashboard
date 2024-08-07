@@ -785,7 +785,7 @@ The Enterprise survey questions used for the definition of the Digital Intensity
 
 :::
 
-# Businesses {orientation="columns"}
+# Businesses Digitalization {orientation="columns"}
 
 ## Column {width="33%"}
 ### Row {height="35%"}

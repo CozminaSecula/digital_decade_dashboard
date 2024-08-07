@@ -14,7 +14,7 @@ website:
         contents:
           - href: businesses.qmd
           - text: Project Description
-    background: "#f1de67" # Arylide Yellow
+    background: "#f1de67"
     align: center
     tools:
       - icon: github
@@ -36,7 +36,7 @@ website:
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)."
     left: "&copy; 2024 [Cozmina Secula](https://cozminasecula.github.io/blog/)"
-    background: "#f1de67" # Arylide Yellow
+    background: "#f1de67"
 
 
 
@@ -46,7 +46,6 @@ website:
 format:
   html:
     theme: [simplex, custom.scss]
-    linkcolor: "#866fa3" # Glossy Grape
     toc: true
 
 
