@@ -1,19 +1,12 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "How digital is the EU? A series of dashboards that show data related to Europe’s Digital Decade ",
-    "section": "",
-    "text": "Digital Decade Dashboard"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this site",
     "crumbs": [
-      "About Digital Dasboards",
+      "About Digital Dashboards",
       "Overview"
     ]
   }
