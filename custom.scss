@@ -313,7 +313,7 @@ $grid-gap: 10px;
     height: 500px; /* Fixed height for the image */
     object-fit: cover; /* Ensure the image covers the specified dimensions */
     display: block; /* Ensure it takes up space in the layout */
-    margin: 0 auto; /* Center the image horizontally */
+    /*margin: 0 auto; /* Center the image horizontally /* No need to center the image, so no margin: 0 auto; */
 }
 
 /* Adjusting the font size and alignment of icons */
