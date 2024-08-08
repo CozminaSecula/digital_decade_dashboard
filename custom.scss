@@ -35,7 +35,7 @@ $sidebar-fg: #212121;
 /* Define Variables dashboard */
 $card-border-radius: 8px; /* Defines the border-radius for the sidebar elements.*/
 $card-border-width: 1px; /* Sets the width of the border for the sidebar elements.*/
-$card-border-color: #bdbdbd; /* Specifies the color of the border for the sidebar elements*/
+$card-border-color: transparent; /* Specifies the color of the border for the sidebar elements*/
 $card-cap-bg: #F0F0F0; /* Sets the background color for the sidebar */
 $card-cap-color: #212121; /* Specifies the text color for the sidebar */
 
@@ -168,6 +168,182 @@ aside.sidebar {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 500px;  /* Adjust as needed */
-  width: 1000px;   /* Adjust as needed */
+  height: 400px;  /* Adjust as needed */
+  width: 700px;   /* Adjust as needed */
 }
+
+
+
+/* If there are borders around the entire breadcrumb list: */
+.breadcrumb {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* card deshboards */
+
+// Define gap between grid items
+$grid-gap: 10px;
+
+// Base grid styling
+.grid {
+    display: grid;
+    grid-template-rows: repeat(var(--bs-rows, 1), 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $grid-gap; /* Define space between items */
+}
+
+// Custom grid styling for additional adjustments
+.my-custom-grid {
+    @extend .grid; /* Ensure this inherits base grid styles */
+    column-gap: $grid-gap; /* Adjust column gap if needed */
+}
+
+
+
+
+/* Define custom font size classes */
+.small {
+  font-size: xx-small; /* Smaller than the default size */
+}
+
+.larger {
+  font-size: larger; /* Larger than the default size */
+}
+
+.point {
+  font-size: 24pt; /* 24-point size, adjust as needed */
+}
+
+.percent {
+  font-size: 200%; /* 200% of the parent element's font size */
+}
+
+
+
+.py-1 {
+    padding-top: .25rem !important;
+    padding-bottom: .25rem !important;
+}
+.px-2 {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+}
+.border-1 {
+    border-width: 1px !important;
+}
+.border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+
+
+
+
+
+/* Ensure that card-text has the correct font size and styling */
+.card-text {
+  font-size: 0.875rem; /* Small font size for additional text */
+  color: #6c757d; /* Muted gray color */
+  display: block; /* Ensure it behaves as a block-level element */
+}
+
+.inline-block {
+  display: inline-block; /* Inline-block for layout adjustment */
+}
+
+.source-code {
+  /* Styling for source code links */
+}
+
+.text-muted {
+  color: #6c757d; /* Muted gray color for text */
+}
+
+.listing-subtitle {
+  font-size: 0.875rem; /* Font size for subtitles */
+  font-weight: normal; /* Normal font weight for subtitle text */
+}
+
+.bi-code-slash {
+  font-size: 1.25rem; /* Icon size */
+  color: #007bff; /* Icon color */
+  margin-right: 0.5rem; /* Spacing between icon and text */
+}
+
+
+.card-header {
+    position: relative; /* Establishes a positioning context for child elements */
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--bs-card-cap-color);
+    background-color: #f0f0f0 !important;
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.header-content {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Vertically centers items within the header */
+    justify-content: space-between; /* Distributes space between items */
+}
+
+.source-code {
+    position: absolute; /* Positions the icon relative to the nearest positioned ancestor */
+    top: 0;
+    right: 0;
+    padding: 0.10rem; /* Adds padding to ensure it doesn’t touch the edges */
+    color: #007bff; /* Icon color */
+}
+
+.card {
+    width: 100%; /* Ensure the card takes full width of its parent container */
+    max-width: 800px; /* Set a maximum width if needed */
+    margin: auto; /* Center the card if the width is less than the container */
+    padding: 10px; /* Add padding if necessary */
+}
+
+.card-img-top {
+    width: 100%; /* Ensure the image takes the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Remove maximum width constraint */
+    max-height: none; /* Remove maximum height constraint */
+    object-fit: cover; /* Ensure the image covers the dimensions */
+}
+
+
+/* Adjusting the font size and alignment of icons */
+.bi-code-slash::before {
+    content: "\f2c6";
+    font-family: bootstrap-icons !important;
+    font-size: 1.25rem; /* Adjust size if needed */
+    vertical-align: middle; /* Adjust alignment if needed */
+}
+
+
+
+
+/* AResponsive Design Adjustments */
+@media (min-width: 768px) {
+    .card {
+        max-width: 90%; /* Adjust card size for medium and larger screens */
+        margin: auto; /* Center the card */
+    }
+
+    .card-img-top {
+        max-width: 100%; /* Ensure image scales to fit the card */
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        max-width: 80%; /* Further adjust card size for very large screens */
+        margin: auto; /* Center the card */
+    }
+
+    .card-img-top {
+        max-width: 100%; /* Ensure image scales to fit the card */
+    }
+}
+
