@@ -2,19 +2,14 @@ project:
   type: website
 
 website:
-  title: "Digital Decade Dashboard"
+  page-navigation: true
+  reader-mode: true
+  title: "Digital Decade Dashboards"
+  description: "A series of dashboards that show data related to Europe's Digital Decade"
+
   sidebar:
-    collapse-level: 1
-    contents:
-      - href: index.qmd
-        text: About
-      - href: dashboard.qmd
-        text: Dashboard
-      - section: "Digital Business"
-        contents:
-          - href: businesses.qmd
-          - text: Project Description
     background: "#f1de67"
+    pinned: true
     align: center
     tools:
       - icon: github
@@ -27,9 +22,20 @@ website:
         href: mailto:cozmina.secula@gmail.com
         text: "Email"
 
-
-    style: docked
+    style: "docked"
     search: true
+    collapse-level: 1
+    contents:
+      - section: "About Digital Dasboards"
+        contents:
+          - href: about.qmd
+            text: Overview
+
+      - section: "Topics"
+        contents:
+          - href: ./dashboards/digital_business.qmd
+            text: Digital Business
+
 
 
 
@@ -37,7 +43,6 @@ website:
     right: "Built with [Quarto](https://quarto.org/)."
     left: "&copy; 2024 [Cozmina Secula](https://cozminasecula.github.io/blog/)"
     background: "#f1de67"
-
 
 
   open-graph: true

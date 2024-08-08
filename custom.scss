@@ -32,12 +32,12 @@ $sidebar-fg: #252525;
 
 
 
-/* New Variables */
-$card-border-radius: 8px; /* Adjust as needed / Defines the border-radius for the sidebar elements.*/
-$card-border-width: 1px; /* Adjust as needed / Sets the width of the border for the sidebar elements.*/
-$card-border-color: #bdbdbd; /* Adjust as needed / Specifies the color of the border for the sidebar elements*/
-$card-cap-bg: #F0F0F0; /* Adjust as needed /Sets the background color for the sidebar */
-$card-cap-color: #252525; /* Adjust as needed /Specifies the text color for the sidebar */
+/* Define Variables dashboard */
+$card-border-radius: 8px; /* Defines the border-radius for the sidebar elements.*/
+$card-border-width: 1px; /* Sets the width of the border for the sidebar elements.*/
+$card-border-color: #bdbdbd; /* Specifies the color of the border for the sidebar elements*/
+$card-cap-bg: #F0F0F0; /* Sets the background color for the sidebar */
+$card-cap-color: #252525; /* Specifies the text color for the sidebar */
 
 
 
@@ -157,25 +157,8 @@ aside.sidebar {
   margin-top: 0.5em;
 }
 
-.sidebar {
-  @include observable-sidebar-inputs();
-
-  .card-body {
-    margin-bottom: 2em;
-  }
-
-  .shiny-input-container {
-    margin-bottom: 1em;
-  }
-
-  .shiny-options-group {
-    margin-top: 0;
-  }
-  .control-label {
-    margin-bottom: 0.3em;
-  }
-}
 
 .card .card-body .quarto-layout-row {
   align-items: stretch;
 }
+
