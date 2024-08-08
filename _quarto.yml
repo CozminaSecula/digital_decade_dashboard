@@ -24,17 +24,20 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - section: "About Digital Dasboards"
         contents:
           - href: about.qmd
             text: Overview
-
-      - section: "Topics"
+      - section: "Digital Business"
         contents:
-          - href: ./dashboards/digital_business.qmd
-            text: Digital Business
+          - section: "Digital Technologies"
+            contents:
+              - href: ./dashboards/digital_business.qmd
+                text: Project Description
+              - href: ./dashboards/dashboard_digital_business.qmd
+                text: Dashboard
 
 
 
