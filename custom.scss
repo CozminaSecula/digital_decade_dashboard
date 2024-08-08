@@ -255,7 +255,8 @@ $grid-gap: 10px;
 }
 
 .source-code {
-  /* Styling for source code links */
+    display: inline-block;
+    margin-left: 10px; /* Space between text and icon */
 }
 
 .text-muted {
@@ -275,13 +276,15 @@ $grid-gap: 10px;
 
 
 .card-header {
-    position: relative; /* Establishes a positioning context for child elements */
-    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
-    margin-bottom: 0;
-    color: var(--bs-card-cap-color);
-    background-color: #f0f0f0 !important;
-    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    background-color: #f0f0f0; /* Light grey background for the header */
+    padding: 10px; /* Adjust padding as needed */
+    border-bottom: 1px solid #ddd; /* Example border style */
 }
+
+.card-body {
+    padding: 15px; /* Add padding to the body content */
+}
+
 
 .header-content {
     display: flex; /* Aligns items horizontally */
@@ -298,20 +301,20 @@ $grid-gap: 10px;
 }
 
 .card {
-    width: 100%; /* Ensure the card takes full width of its parent container */
-    max-width: 800px; /* Set a maximum width if needed */
-    margin: auto; /* Center the card if the width is less than the container */
-    padding: 10px; /* Add padding if necessary */
+    width: 1000px; /* Fixed width for the card */
+    max-width: 100%; /* Ensure responsiveness */
+    margin: auto; /* Center the card horizontally */
+    border-radius: 8px; /* Example border-radius */
+    overflow: hidden; /* Ensure content stays within the card */
 }
 
 .card-img-top {
-    width: 100%; /* Ensure the image takes the full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Remove maximum width constraint */
-    max-height: none; /* Remove maximum height constraint */
-    object-fit: cover; /* Ensure the image covers the dimensions */
+    width: 1000px; /* Fixed width for the image */
+    height: 500px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    display: block; /* Ensure it takes up space in the layout */
+    margin: 0 auto; /* Center the image horizontally */
 }
-
 
 /* Adjusting the font size and alignment of icons */
 .bi-code-slash::before {
@@ -325,25 +328,15 @@ $grid-gap: 10px;
 
 
 /* AResponsive Design Adjustments */
-@media (min-width: 768px) {
-    .card {
-        max-width: 90%; /* Adjust card size for medium and larger screens */
-        margin: auto; /* Center the card */
+@media (max-width: 768px) {
+    .card-img-top {
+        width: 100%; /* Scale image down on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        max-width: none; /* Remove width constraints */
+        max-height: none; /* Remove height constraints */
     }
 
-    .card-img-top {
-        max-width: 100%; /* Ensure image scales to fit the card */
+    .card {
+        width: 100%; /* Ensure card scales on smaller screens */
     }
 }
-
-@media (min-width: 1200px) {
-    .card {
-        max-width: 80%; /* Further adjust card size for very large screens */
-        margin: auto; /* Center the card */
-    }
-
-    .card-img-top {
-        max-width: 100%; /* Ensure image scales to fit the card */
-    }
-}
-
