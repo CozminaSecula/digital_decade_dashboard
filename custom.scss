@@ -26,9 +26,9 @@ $link-color: #1F7699;
 $hover-color: lighten($link-color, 50%);
 
 $body-bg: #FCFCFC;
-$body-color: #252525;
+$body-color: #212121;
 
-$sidebar-fg: #252525;
+$sidebar-fg: #212121;
 
 
 
@@ -37,7 +37,7 @@ $card-border-radius: 8px; /* Defines the border-radius for the sidebar elements.
 $card-border-width: 1px; /* Sets the width of the border for the sidebar elements.*/
 $card-border-color: #bdbdbd; /* Specifies the color of the border for the sidebar elements*/
 $card-cap-bg: #F0F0F0; /* Sets the background color for the sidebar */
-$card-cap-color: #252525; /* Specifies the text color for the sidebar */
+$card-cap-color: #212121; /* Specifies the text color for the sidebar */
 
 
 
@@ -162,3 +162,12 @@ aside.sidebar {
   align-items: stretch;
 }
 
+
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;  /* Adjust as needed */
+  width: 1000px;   /* Adjust as needed */
+}

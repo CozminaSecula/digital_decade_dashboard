@@ -8,15 +8,17 @@ website:
   description: "A series of dashboards that show data related to Europe's Digital Decade"
 
   sidebar:
-    background: "#f1de67"
+    background: "#d7c378"
     pinned: true
     align: center
     tools:
       - icon: github
         href: https://github.com/CozminaSecula
+        target: _blank
         text: "GitHub"
       - icon: linkedin
         href: https://www.linkedin.com/in/cozminasecula/
+        target: _blank
         text: "Linkedin"
       - icon: envelope
         href: mailto:cozmina.secula@gmail.com
@@ -26,7 +28,7 @@ website:
     search: true
     collapse-level: 2
     contents:
-      - section: "About Digital Dasboards"
+      - section: "About Digital Dashboards"
         contents:
           - href: about.qmd
             text: Overview
@@ -37,15 +39,16 @@ website:
               - href: ./dashboards/digital_business.qmd
                 text: Project Description
               - href: ./dashboards/dashboard_digital_business.qmd
+                target: _blank
                 text: Dashboard
 
 
 
 
   page-footer:
-    right: "Built with [Quarto](https://quarto.org/)."
-    left: "&copy; 2024 [Cozmina Secula](https://cozminasecula.github.io/blog/)"
-    background: "#f1de67"
+    right: "Website built with <a href='https://quarto.org/' target='_blank'>Quarto</a>"
+    left: "&copy; 2024 <a href='https://cozminasecula.github.io/blog/' target='_blank'>Cozmina Secula</a>"
+    background: "#d7c378"
 
 
   open-graph: true

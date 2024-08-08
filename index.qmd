@@ -1,9 +1,9 @@
 ---
 title: "How digital is the EU? <span style='font-size:14pt'><br>A series of dashboards that show data related to Europe's Digital Decade <br></span> "
-
 ---
 
-
-
-[![Digital Decade Dashboard](dashboards/image/dashboard_digital_business.png)](https://cozminasecula.github.io/digital_decade_dashboard/dashboards/dashboard_digital_business.html target="_blank")
-
+<a href="https://cozminasecula.github.io/digital_decade_dashboard/dashboards/dashboard_digital_business.html" target="_blank">
+  <img src="dashboards/image/dashboard_digital_business.png" 
+       alt="Digital Business Dashboard" 
+       class="centered-image">
+</a>
