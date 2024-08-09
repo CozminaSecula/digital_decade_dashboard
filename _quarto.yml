@@ -2,45 +2,47 @@ project:
   type: website
 
 website:
-  page-navigation: true
-  reader-mode: true
-  title: "Digital Decade Dashboards"
-  description: "A series of dashboards that show data related to Europe's Digital Decade"
+  title: ""
+
 
   sidebar:
-    background: "#d7c378"
-    pinned: true
-    align: center
-    tools:
-      - icon: github
-        href: https://github.com/CozminaSecula
-        target: _blank
-        text: "GitHub"
-      - icon: linkedin
-        href: https://www.linkedin.com/in/cozminasecula/
-        target: _blank
-        text: "Linkedin"
-      - icon: envelope
-        href: mailto:cozmina.secula@gmail.com
-        text: "Email"
+      background: "#447099"
+      pinned: true
+      align: center
+      tools:
+        - icon: github
+          href: https://github.com/CozminaSecula
+          target: _blank
+          text: "GitHub"
+        - icon: linkedin
+          href: https://www.linkedin.com/in/cozminasecula/
+          target: _blank
+          text: "Linkedin"
+        - icon: envelope
+          href: mailto:cozmina.secula@gmail.com
+          text: "Email"
 
-    style: "docked"
-    search: true
-    collapse-level: 2
-    contents:
-      - section: "About Digital Dashboards"
-        contents:
-          - href: about.qmd
-            text: Overview
-      - section: "Digital Business"
-        contents:
-          - section: "Digital Technologies"
-            contents:
-              - href: ./dashboards/digital_business.qmd
-                text: Project Description
-              - href: ./dashboards/dashboard_digital_business.qmd
-                target: _blank
-                text: Dashboard
+
+      style: "docked"
+      search: true
+      collapse-level: 2
+      contents:
+        - href: index.qmd
+          text: "Digital Dasboards"
+        - href: about.qmd
+          text: Overview
+        - section: "Topics"
+          contents:
+            - section: "Digital Business"
+              contents:
+                - section: "Digital Tachnologies"
+                  contents:
+                    - href: ./dashboards/digital_business.qmd
+                      text: Project Description
+                    - href: ./dashboards/dashboard_digital_business.qmd
+                      target: _blank
+                      text: Dashboard
+
 
 
 
@@ -48,7 +50,7 @@ website:
   page-footer:
     right: "Website built with <a href='https://quarto.org/' target='_blank'>Quarto</a>"
     left: "&copy; 2024 <a href='https://cozminasecula.github.io/blog/' target='_blank'>Cozmina Secula</a>"
-    background: "#d7c378"
+    background: "#447099"
 
 
   open-graph: true

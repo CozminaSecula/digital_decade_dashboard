@@ -1,193 +1,165 @@
 /*-- scss:defaults --*/
 
-$theme-dark-purple: #7D3C98;
+
+/*----------------------------------
+   1. VARIABLES & IMPORTS
+----------------------------------*/
+
+
+/* Color Theme */
+
 $theme-darkest-gray: #191414;
 $theme-medium-gray: #282828;
 $theme-light-gray: #f4f4f4;
 $theme-text-color: white;
 
 
-
-// fonts
+/* Fonts */
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
 
-/*$font-family-sans-serif: "Atkinson Hyperlegible";*/
+$font-size-root: 0.95rem; /* Base font size */
 
-/*$font-family-sans-serif: "Georgia";*/
-$font-size-root: 0.9rem;
+$font-family-sans-serif: "Atkinson Hyperlegible";
 
-// colors
+
+
+/* General Colors */
 
 $navbar-bg: #252525;
 $navbar-fg: #FCFCFC;
 
-$link-color: #1F7699;
+$link-color: #447099;
 $hover-color: lighten($link-color, 50%);
 
 $body-bg: #FCFCFC;
-$body-color: #212121;
+$body-color: #404041;
 
-$sidebar-fg: #212121;
+$sidebar-fg: #ffffff;
 
 
 
-/* Define Variables dashboard */
-$card-border-radius: 8px; /* Defines the border-radius for the sidebar elements.*/
-$card-border-width: 1px; /* Sets the width of the border for the sidebar elements.*/
-$card-border-color: transparent; /* Specifies the color of the border for the sidebar elements*/
-$card-cap-bg: #F0F0F0; /* Sets the background color for the sidebar */
-$card-cap-color: #212121; /* Specifies the text color for the sidebar */
+
+/* Card Variables / sidebar elements */
+
+$card-border-radius: 8px; /* Border radius for cards */
+$card-border-width: 1px; /* Border width for cards */
+$card-border-color: transparent; /* Border color for cards */
+$card-cap-bg: #F0F0F0; /* Background color for card headers */
+$card-cap-color: #252525; /* Text color for card headers dashboard */
+
 
 
 
 /*-- scss:rules --*/
-.card-header {
-  background-color: #F0F0F0;
-  font-weight: bold;
-  font-size: 1rem;
-}
 
-.nav-item > a:hover {
-  color: #737373;
-}
+/*----------------------------------
+   2. BASE STYLES
+----------------------------------*/
 
-.nav-link{
-  color: #414040;
-  font-size: 1rem;
-}
-
-
-div.callout.callout {
-  border-left-color: #737373;
-}
-
-div.callout.callout-style-default>.callout-header {
-  background-color: #737373;
-}
-
+/* Navbar * Dashboards */
 .navbar-container {
-    height: 75px
+    height: 75px; /* Fixed height for navbar */
 }
 
-/* Increase font size for callout title */
-aside.sidebar div.callout .callout-header {
-  font-size: 1rem; /* Adjust this value as needed */
+
+/* Links */
+.nav-item > a:hover {
+  color: #737373; /* Hover color for navbar links */
 }
 
-/* Sidebar Customization */
-.bslib-grid > .bslib-sidebar-layout {
-  border: none;
-  gap: var(--bslib-spacer, 1rem);
-  > .main {
-    padding: 0;
-  }
-  > .sidebar {
-    border-radius: $card-border-radius;
-    border: $card-border-width solid $card-border-color;
-  }
-  > .collapse-toggle {
-    display: none;
-  }
-
-  @include media-breakpoint-down(md) {
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr;
-    > .main {
-      grid-column: 1;
-      grid-row: 2;
-    }
-    .sidebar {
-      grid-column: 1;
-      grid-row: 1;
-    }
-  }
+.nav-link {
+  color: #414040; /* Default link color */
+  font-size: 1rem; /* Link font size */
 }
 
-.sidebar-right {
-  .sidebar {
-    padding-left: 2.5em;
-  }
-
-  .collapse-toggle {
-    left: 2px;
-  }
+/* Body */
+body {
+  background-color: $body-bg;
+  color: $body-color;
+  font-size: $font-size-root;
 }
 
-.quarto-dashboard .sidebar-right button.collapse-toggle:not(.transitioning) {
-  left: unset;
+
+
+
+
+/*----------------------------------
+   3. COMPONENTS
+----------------------------------*/
+
+/* Card Styles /digital dashboards page */
+
+.card {
+    width: 1000px; /* Fixed width for the card */
+    max-width: 100%; /* Ensure responsive width */
+    margin: auto; /* Center the card horizontally */
+    border-radius: $card-border-radius; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within the card */
 }
 
-aside.sidebar {
-  padding-left: 1em;
-  padding-right: 1em;
-  background-color: $card-cap-bg;
-  color: $card-cap-color or $body-color;
+
+.card-header {
+    background-color: $card-cap-bg; /* Header background */
+    padding: 10px; /* Header padding */
+    border-bottom: 1px solid #ddd; /* Header bottom border style */
+    font-size: 1.7rem; /* Font size */
+    /*font-weight: bold; /* Bold text */
 }
 
-.bslib-sidebar-layout {
-  > div.main {
-    padding: 0.7em;
-  }
 
-  button.collapse-toggle {
-    margin-top: 0.3em;
-  }
+.card-body {
+    padding: 15px; /* Padding for card body */
 }
 
-.bslib-sidebar-layout .collapse-toggle {
+
+.card-img-top {
+    width: 1000px; /* Fixed width for image */
+    height: 500px; /* Fixed height for image */
+    object-fit: cover; /* Image covers the specified dimensions */
+    display: block; /* Block level element */
+    /*margin: 0 auto; /* Center the image horizontally /* No need to center the image, so no margin: 0 auto; */
+}
+
+
+/* Card Text */
+
+.card-text {
+  font-size: 1.5rem; /* Medium font size */
+  color: #6c757d; /* Muted gray color */
+  display: block; /* Block-level element */
+}
+
+
+/* Icon in Header */
+
+.bi-code-slash {
+  font-size: 1.25rem; /* Icon size */
+  color: #007bff; /* Icon color */
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.source-code {
+  position: absolute; /* Absolute positioning */
   top: 0;
-}
-
-.bslib-sidebar-layout.sidebar-collapsed:not(.transitioning):not(
-    .sidebar-right
-  )
-  .collapse-toggle {
-  left: 2px;
-}
-
-.sidebar > section > .h3:first-of-type {
-  margin-top: 0em;
-}
-
-.sidebar .h3,
-.sidebar .h4,
-.sidebar .h5,
-.sidebar .h6 {
-  margin-top: 0.5em;
-}
-
-
-.card .card-body .quarto-layout-row {
-  align-items: stretch;
+  right: 0;
+  padding: 0.10rem; /* Padding around icon */
+  color: #007bff; /* Icon color */
 }
 
 
 
-.centered-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 400px;  /* Adjust as needed */
-  width: 700px;   /* Adjust as needed */
-}
 
 
+/*----------------------------------
+   4. GRID & LAYOUT
+----------------------------------*/
 
-/* If there are borders around the entire breadcrumb list: */
-.breadcrumb {
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
+/* Grid Layout */
+$grid-gap: 10px; /* Space between grid items */
 
 
-/* card deshboards */
-
-// Define gap between grid items
-$grid-gap: 10px;
-
-// Base grid styling
+/* Base grid styling */
 .grid {
     display: grid;
     grid-template-rows: repeat(var(--bs-rows, 1), 1fr);
@@ -195,7 +167,7 @@ $grid-gap: 10px;
     gap: $grid-gap; /* Define space between items */
 }
 
-// Custom grid styling for additional adjustments
+/* Custom grid styling for additional adjustments */
 .my-custom-grid {
     @extend .grid; /* Ensure this inherits base grid styles */
     column-gap: $grid-gap; /* Adjust column gap if needed */
@@ -204,33 +176,47 @@ $grid-gap: 10px;
 
 
 
-/* Define custom font size classes */
+
+
+/*----------------------------------
+   5. TYPOGRAPHY & TEXT STYLES
+----------------------------------*/
+
+/* Custom Font Sizes */
 .small {
-  font-size: xx-small; /* Smaller than the default size */
+  font-size: 0.75em; /* Extra small text */
 }
 
 .larger {
-  font-size: larger; /* Larger than the default size */
+  font-size: 1.3em; /* Larger text */
 }
 
 .point {
-  font-size: 24pt; /* 24-point size, adjust as needed */
+  font-size: 24pt; /* 24pt text */
 }
 
 .percent {
-  font-size: 200%; /* 200% of the parent element's font size */
+  font-size: 200%; /* 200% of parent font size */
 }
 
 
 
+
+/*----------------------------------
+   6. UTILITIES
+----------------------------------*/
+
+/* Padding & Borders */
 .py-1 {
     padding-top: .25rem !important;
     padding-bottom: .25rem !important;
 }
+
 .px-2 {
     padding-right: .5rem !important;
     padding-left: .5rem !important;
 }
+
 .border-1 {
     border-width: 1px !important;
 }
@@ -240,103 +226,129 @@ $grid-gap: 10px;
 
 
 
-
-
-
-/* Ensure that card-text has the correct font size and styling */
-.card-text {
-  font-size: 0.875rem; /* Small font size for additional text */
-  color: #6c757d; /* Muted gray color */
-  display: block; /* Ensure it behaves as a block-level element */
-}
-
-.inline-block {
-  display: inline-block; /* Inline-block for layout adjustment */
-}
-
-.source-code {
-    display: inline-block;
-    margin-left: 10px; /* Space between text and icon */
-}
-
-.text-muted {
-  color: #6c757d; /* Muted gray color for text */
-}
-
-.listing-subtitle {
-  font-size: 0.875rem; /* Font size for subtitles */
-  font-weight: normal; /* Normal font weight for subtitle text */
-}
-
-.bi-code-slash {
-  font-size: 1.25rem; /* Icon size */
-  color: #007bff; /* Icon color */
-  margin-right: 0.5rem; /* Spacing between icon and text */
-}
-
-
-.card-header {
-    background-color: #f0f0f0; /* Light grey background for the header */
-    padding: 10px; /* Adjust padding as needed */
-    border-bottom: 1px solid #ddd; /* Example border style */
-}
-
-.card-body {
-    padding: 15px; /* Add padding to the body content */
-}
-
-
-.header-content {
-    display: flex; /* Aligns items horizontally */
-    align-items: center; /* Vertically centers items within the header */
-    justify-content: space-between; /* Distributes space between items */
-}
-
-.source-code {
-    position: absolute; /* Positions the icon relative to the nearest positioned ancestor */
-    top: 0;
-    right: 0;
-    padding: 0.10rem; /* Adds padding to ensure it doesn’t touch the edges */
-    color: #007bff; /* Icon color */
-}
-
-.card {
-    width: 1000px; /* Fixed width for the card */
-    max-width: 100%; /* Ensure responsiveness */
-    margin: auto; /* Center the card horizontally */
-    border-radius: 8px; /* Example border-radius */
-    overflow: hidden; /* Ensure content stays within the card */
-}
-
-.card-img-top {
-    width: 1000px; /* Fixed width for the image */
-    height: 500px; /* Fixed height for the image */
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
-    display: block; /* Ensure it takes up space in the layout */
-    /*margin: 0 auto; /* Center the image horizontally /* No need to center the image, so no margin: 0 auto; */
-}
-
-/* Adjusting the font size and alignment of icons */
-.bi-code-slash::before {
-    content: "\f2c6";
-    font-family: bootstrap-icons !important;
-    font-size: 1.25rem; /* Adjust size if needed */
-    vertical-align: middle; /* Adjust alignment if needed */
-}
-
-
-
-
-/* AResponsive Design Adjustments */
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .card-img-top {
-        width: 100%; /* Scale image down on smaller screens */
+        width: 100%; /* Full width on small screens */
         height: auto; /* Maintain aspect ratio */
-        max-width: none; /* Remove width constraints */
-        max-height: none; /* Remove height constraints */
     }
 
     .card {
-        width: 100%; /* Ensure card scales on smaller screens */
+        width: 100%; /* Full width for cards */
     }
 }
+
+
+
+
+/*----------------------------------
+   7. MISCELLANEOUS
+----------------------------------*/
+
+/* Callout Boxes */
+div.callout {
+  border-left-color: #737373; /* Left border color */
+}
+
+div.callout-style-default > .callout-header {
+  background-color: #737373; /* Header background */
+}
+
+
+/* If there are borders around the entire breadcrumb list: */
+/* Breadcrumb */
+.breadcrumb {
+  border: none;
+  outline: none;
+  box-shadow: none; /* No border or shadow */
+}
+
+
+.quarto-dashboard .sidebar-right button.collapse-toggle:not(.transitioning) {
+  left: unset;
+}
+
+
+
+/* Sidebar Layout */
+.bslib-sidebar-layout {
+  border: none;
+  gap: var(--bslib-spacer, 1rem);
+  > div.main {
+    padding: 0.7em; /* Main content padding */
+  }
+  > div.sidebar {
+    border-radius: $card-border-radius; /* Sidebar rounded corners */
+    border: $card-border-width solid $card-border-color; /* Sidebar border */
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: $card-cap-bg; /* Sidebar background */
+    color: $card-cap-color or $body-color; /* Sidebar text color */
+    font-size: 1.2em;
+  }
+  > .collapse-toggle {
+    display: none;
+  }
+}
+
+
+
+/* Sidebar item styling */
+.sidebar-item {
+  margin-bottom: 0.5rem; /* Space between items */
+}
+
+
+
+/* Sidebar item container styling */
+.sidebar-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Sidebar icons */
+.bi {
+  font-size: 1.5rem; /* Adjust icon size */
+  color: #ffffff; /* Icon color */
+  margin-right: 0.5rem; /* Space between icon and text */
+  display: inline-flex;
+  align-items: center;
+}
+
+
+
+/* Separator line between items */
+.sidebar-divider {
+  border-top: 1px solid #ffffff; /* Color of the divider line */
+  margin: 1rem 0; /* Margin around the divider */
+}
+
+
+
+/* Toggle button for collapsible sections */
+.sidebar-item-toggle {
+  font-size: 1.2rem; /* Size of the toggle icon */
+  color: #ffffff; /* Color of the toggle icon */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+
+
+/* Responsive Sidebar for smaller screens */
+.sidebar-right {
+  .sidebar {
+    padding-left: 2.5em; /* Sidebar padding */
+  }
+
+  .collapse-toggle {
+    left: 2px;
+  }
+}
+
+.bslib-sidebar-layout.sidebar-collapsed:not(.transitioning):not(.sidebar-right) .collapse-toggle {
+  left: 2px;
+}
+
