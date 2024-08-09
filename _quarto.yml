@@ -28,14 +28,14 @@ website:
       collapse-level: 2
       contents:
         - href: index.qmd
-          text: "Digital Dasboards"
+          text: "Digital Dashboards"
         - href: about.qmd
           text: Overview
         - section: "Topics"
           contents:
             - section: "Digital Business"
               contents:
-                - section: "Digital Tachnologies"
+                - section: "Digital Technologies"
                   contents:
                     - href: ./dashboards/digital_business.qmd
                       text: Project Description
