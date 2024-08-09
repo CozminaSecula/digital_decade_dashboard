@@ -311,3 +311,13 @@ $grid-gap: 10px; /* Space between grid items */
 }
 
 
+
+
+/* If there are borders around the entire breadcrumb list: */
+/* Breadcrumb */
+.breadcrumb {
+  border: none;
+  outline: none;
+  box-shadow: none; /* No border or shadow */
+}
+
