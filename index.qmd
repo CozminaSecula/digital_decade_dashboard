@@ -5,6 +5,7 @@ title: "<span style='font-size:24pt; color:#447099;'> Digital Dashboards </span>
 
 # How Digital is the EU?
 
+
 ::: larger
 A series of dashboards that show data related to Europe’s Digital Decade
 :::

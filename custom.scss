@@ -13,16 +13,10 @@ $theme-medium-gray: #282828;
 $theme-light-gray: #f4f4f4;
 $theme-text-color: white;
 
-
 /* Fonts */
-@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap);
 
-
-$font-size-root: 0.95rem; /* Base font size */
-
-/*$font-family-sans-serif: "Atkinson Hyperlegible";*/
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -33,16 +27,21 @@ code {
 }
 
 
+
+$font-size-root: 0.95rem; /* Base font size */
+
+
 .space-between-sections {
     padding-bottom: 60px;
     padding-top: 60px;
 }
 
-/* General Colors */
+/* General Colors Dashboard*/
 
-$navbar-bg: #252525;
-$navbar-fg: #FCFCFC;
+$navbar-bg: #252525; /*navbar color background*/
+$navbar-fg: #FCFCFC; /*navbar color text*/
 
+/* General Colors W & D*/
 $link-color: #447099;
 $hover-color: lighten($link-color, 50%);
 
@@ -52,17 +51,13 @@ $body-color: #404041;
 $sidebar-fg: #ffffff;
 
 
-
-
-/* Card Variables / sidebar elements */
+/* Card Variables / sidebar elements Dashboard*/
 
 $card-border-radius: 8px; /* Border radius for cards */
 $card-border-width: 1px; /* Border width for cards */
 $card-border-color: transparent; /* Border color for cards */
 $card-cap-bg: #F0F0F0; /* Background color for card headers */
 $card-cap-color: #252525; /* Text color for card headers dashboard */
-
-
 
 
 /*-- scss:rules --*/
@@ -76,17 +71,6 @@ $card-cap-color: #252525; /* Text color for card headers dashboard */
     height: 75px; /* Fixed height for navbar */
 }
 
-
-/* Links */
-.nav-item > a:hover {
-  color: #737373; /* Hover color for navbar links */
-}
-
-.nav-link {
-  color: #414040; /* Default link color */
-  font-size: 1rem; /* Link font size */
-}
-
 /* Body */
 body {
   background-color: $body-bg;
@@ -96,13 +80,44 @@ body {
 
 
 
+/* Heading styles */
+
+
+.h1 {
+    font-family: Open Sans, sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+.h2 {
+    font-family: Open Sans, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 160%;
+}
+
+.h3 {
+    font-family: Open Sans, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+.h4 {
+    font-family: Open Sans, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 160%;
+}
+
 
 
 /*----------------------------------
    3. COMPONENTS
 ----------------------------------*/
 
-/* Card Styles /digital dashboards page */
+/* Card Styles /main page */
 
 .card {
     width: 1000px; /* Fixed width for the card */
@@ -110,29 +125,19 @@ body {
     margin: auto; /* Center the card horizontally */
     border-radius: $card-border-radius; /* Rounded corners */
     overflow: hidden; /* Ensure content stays within the card */
+    border: 2px solid #ddd;/*Color border for the card*/
 }
-
 
 .card-header {
     background-color: $card-cap-bg; /* Header background */
     padding: 10px; /* Header padding */
     border-bottom: 1px solid #ddd; /* Header bottom border style */
-    font-size: 1.7rem; /* Font size */
+    font-size: 1.5rem; /* Font size */
     /*font-weight: bold; /* Bold text */
 }
 
-
 .card-body {
     padding: 15px; /* Padding for card body */
-}
-
-
-.card-img-top {
-    width: 1000px; /* Fixed width for image */
-    height: 500px; /* Fixed height for image */
-    object-fit: cover; /* Image covers the specified dimensions */
-    display: block; /* Block level element */
-    /*margin: 0 auto; /* Center the image horizontally /* No need to center the image, so no margin: 0 auto; */
 }
 
 
@@ -163,8 +168,6 @@ body {
 
 
 
-
-
 /*----------------------------------
    4. GRID & LAYOUT
 ----------------------------------*/
@@ -186,9 +189,6 @@ $grid-gap: 10px; /* Space between grid items */
     @extend .grid; /* Ensure this inherits base grid styles */
     column-gap: $grid-gap; /* Adjust column gap if needed */
 }
-
-
-
 
 
 
@@ -226,6 +226,7 @@ $grid-gap: 10px; /* Space between grid items */
     padding-bottom: .25rem !important;
 }
 
+
 .px-2 {
     padding-right: .5rem !important;
     padding-left: .5rem !important;
@@ -240,78 +241,10 @@ $grid-gap: 10px; /* Space between grid items */
 
 
 
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    .card-img-top {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .card {
-        width: 100%; /* Full width for cards */
-    }
-}
-
-
-
-
-/*----------------------------------
-   7. MISCELLANEOUS
-----------------------------------*/
-
-/* Callout Boxes */
-div.callout {
-  border-left-color: #737373; /* Left border color */
-}
-
-div.callout-style-default > .callout-header {
-  background-color: #737373; /* Header background */
-}
-
-
-/* If there are borders around the entire breadcrumb list: */
-/* Breadcrumb */
-.breadcrumb {
-  border: none;
-  outline: none;
-  box-shadow: none; /* No border or shadow */
-}
-
-
-.quarto-dashboard .sidebar-right button.collapse-toggle:not(.transitioning) {
-  left: unset;
-}
-
-
-
-/* Sidebar Layout */
-.bslib-sidebar-layout {
-  border: none;
-  gap: var(--bslib-spacer, 1rem);
-  > div.main {
-    padding: 0.7em; /* Main content padding */
-  }
-  > div.sidebar {
-    border-radius: $card-border-radius; /* Sidebar rounded corners */
-    border: $card-border-width solid $card-border-color; /* Sidebar border */
-    padding-left: 1em;
-    padding-right: 1em;
-    background-color: $card-cap-bg; /* Sidebar background */
-    color: $card-cap-color or $body-color; /* Sidebar text color */
-    font-size: 1.2em;
-  }
-  > .collapse-toggle {
-    display: none;
-  }
-}
-
-
-
 /* Sidebar item styling */
 .sidebar-item {
   margin-bottom: 0.5rem; /* Space between items */
 }
-
 
 
 /* Sidebar item container styling */
@@ -342,14 +275,6 @@ div.callout-style-default > .callout-header {
 
 
 
-/* Toggle button for collapsible sections */
-.sidebar-item-toggle {
-  font-size: 1.2rem; /* Size of the toggle icon */
-  color: #ffffff; /* Color of the toggle icon */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-
 
 /* Responsive Sidebar for smaller screens */
 .sidebar-right {
@@ -365,4 +290,24 @@ div.callout-style-default > .callout-header {
 .bslib-sidebar-layout.sidebar-collapsed:not(.transitioning):not(.sidebar-right) .collapse-toggle {
   left: 2px;
 }
+
+
+@media (max-width: 768px) {
+  .bslib-sidebar-layout {
+    > div.main {
+      padding: 1em; /* Adjust padding for smaller screens */
+    }
+
+    > div.sidebar {
+      padding: 1em;
+      width: 100%; /* Full width for smaller screens */
+    }
+
+    main.content {
+      margin-left: 0; /* No sidebar margin for smaller screens */
+      padding: 1em; /* Adjust padding for smaller screens */
+    }
+  }
+}
+
 
