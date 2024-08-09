@@ -120,9 +120,9 @@ body {
 /* Card Styles /main page */
 
 .card {
-    width: 1000px; /* Fixed width for the card */
+    width: 950px; /* Fixed width for the card */
     max-width: 100%; /* Ensure responsive width */
-    margin: auto; /* Center the card horizontally */
+    margin-left: 0; /* Automatically set left margin to push the card to the left */
     border-radius: $card-border-radius; /* Rounded corners */
     overflow: hidden; /* Ensure content stays within the card */
     border: 2px solid #ddd;/*Color border for the card*/
